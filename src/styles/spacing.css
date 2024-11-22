@@ -1,0 +1,71 @@
+.gap__sm {
+  gap: 0.5rem;
+}
+
+.gap__md {
+  gap: 1rem;
+}
+
+.gap__lg {
+  gap: 2rem;
+}
+
+.gap__xl {
+  gap: 4rem;
+}
+
+.gap__2xl {
+  gap: 8rem;
+}
+
+.gap__3xl {
+  gap: 16rem;
+}
+
+.spacing__x__sm > :not([hidden]) ~ :not([hidden]) {
+  margin: 0 0.5rem;
+}
+
+.spacing__x__md > :not([hidden]) ~ :not([hidden]) {
+  margin: 0 1rem;
+}
+
+.spacing__x__lg > :not([hidden]) ~ :not([hidden]) {
+  margin: 0 2rem;
+}
+
+.spacing__x__xl > :not([hidden]) ~ :not([hidden]) {
+  margin: 0 4rem;
+}
+
+.spacing__x__2xl > :not([hidden]) ~ :not([hidden]) {
+  margin: 0 8rem;
+}
+
+.spacing__x__3xl > :not([hidden]) ~ :not([hidden]) {
+  margin: 0 16rem;
+}
+
+.spacing__y__sm > :not([hidden]) ~ :not([hidden]) {
+  margin: 0.5rem 0;
+}
+
+.spacing__y__md > :not([hidden]) ~ :not([hidden]) {
+  margin: 1rem 0;
+}
+
+.spacing__y__lg > :not([hidden]) ~ :not([hidden]) {
+  margin: 2rem 0;
+}
+
+.spacing__y__xl > :not([hidden]) ~ :not([hidden]) {
+  margin: 4rem 0;
+}
+
+.spacing__y__2xl > :not([hidden]) ~ :not([hidden]) {
+  margin: 8rem 0;
+}
+
+.spacing__y__3xl > :not([hidden]) ~ :not([hidden]) {
+  margin: 16rem 0;
+}
