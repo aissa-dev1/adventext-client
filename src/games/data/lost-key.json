@@ -1,0 +1,423 @@
+{
+  "title": "The Lost Key",
+  "intro": "You find yourself standing at the edge of an ancient forest. A dense mist hangs in the air, and the trees whisper secrets you can't quite understand. Your mission is simple: find the Lost Key, said to unlock a treasure hidden deep within the forest.",
+  "startingChoices": [
+    {
+      "choice": "Go left",
+      "nextScene": "leftPath"
+    },
+    {
+      "choice": "Go right",
+      "nextScene": "rightPath"
+    }
+  ],
+  "scenes": {
+    "leftPath": {
+      "description": "You follow the path and encounter a Ranger sitting by a campfire. He looks up as you approach.",
+      "choices": [
+        {
+          "choice": "Ask the Ranger for help",
+          "nextScene": "rangerHelp"
+        },
+        {
+          "choice": "Ignore him and continue on your path",
+          "nextScene": "ignoreRanger"
+        }
+      ]
+    },
+    "rightPath": {
+      "description": "You push through the vines and arrive at an old stone door partially covered by moss.",
+      "choices": [
+        {
+          "choice": "Push the door open",
+          "nextScene": "stoneDoorOpen"
+        },
+        {
+          "choice": "Search the area around the door",
+          "nextScene": "searchAroundDoor"
+        }
+      ]
+    },
+    "rangerHelp": {
+      "description": "The Ranger eyes you suspiciously but decides to speak. 'The Lost Key is hidden in the Cave of Shadows. But be warned, there are dangers lurking.' He offers you a Torch.",
+      "items": ["Torch"],
+      "choices": [
+        {
+          "choice": "Thank the Ranger and head to the Cave",
+          "nextScene": "caveEntrance"
+        },
+        {
+          "choice": "Ask about the dangers in the Cave",
+          "nextScene": "askAboutCave"
+        }
+      ]
+    },
+    "ignoreRanger": {
+      "description": "You walk deeper into the forest. Suddenly, a wild animal leaps from the bushes!",
+      "choices": [
+        {
+          "choice": "Fight the animal",
+          "nextScene": "fightAnimal"
+        },
+        {
+          "choice": "Run away",
+          "nextScene": "runAway"
+        }
+      ]
+    },
+    "fightAnimal": {
+      "description": "You bravely face the wild animal and manage to scare it away. You find a clue it was guarding.",
+      "items": ["Clue"],
+      "choices": [
+        {
+          "choice": "Continue deeper into the forest",
+          "nextScene": "forestDepths"
+        },
+        {
+          "choice": "Return to the Ranger for more information",
+          "nextScene": "rangerHelp"
+        }
+      ]
+    },
+    "runAway": {
+      "description": "You manage to escape the wild animal, but you feel lost and disoriented.",
+      "choices": [
+        {
+          "choice": "Try to find your way back to the path",
+          "nextScene": "findPath"
+        },
+        {
+          "choice": "Climb a tree to get a better view",
+          "nextScene": "climbTree"
+        }
+      ]
+    },
+    "stoneDoorOpen": {
+      "description": "The tunnel inside is dark. After walking for some time, you reach a room with a locked chest in the center.",
+      "choices": [
+        {
+          "choice": "Examine the chest",
+          "nextScene": "examineChest"
+        },
+        {
+          "choice": "Return to the forest",
+          "nextScene": "returnForest"
+        }
+      ]
+    },
+    "searchAroundDoor": {
+      "description": "You find a rusted key hidden under some moss. It looks like it could fit in the chest back at the stone door.",
+      "items": ["Rusted Key"],
+      "choices": [
+        {
+          "choice": "Go back to the chest and try the key",
+          "nextScene": "examineChest"
+        },
+        {
+          "choice": "Keep exploring the area",
+          "nextScene": "keepExploring"
+        }
+      ]
+    },
+    "examineChest": {
+      "description": "You use the Rusted Key to open the chest and find a map that leads to the Cave of Shadows.",
+      "items": ["Map to Cave"],
+      "choices": [
+        {
+          "choice": "Follow the map to the Cave",
+          "nextScene": "caveEntrance"
+        },
+        {
+          "choice": "Return to the forest to explore more",
+          "nextScene": "returnForest"
+        }
+      ]
+    },
+    "returnForest": {
+      "description": "You return to the forest and find yourself at a crossroads. Which way will you go?",
+      "choices": [
+        {
+          "choice": "Go left",
+          "nextScene": "leftPath"
+        },
+        {
+          "choice": "Go right",
+          "nextScene": "rightPath"
+        }
+      ]
+    },
+    "keepExploring": {
+      "description": "You keep exploring and find a hidden cave entrance covered by thick vines.",
+      "choices": [
+        {
+          "choice": "Enter the hidden cave",
+          "nextScene": "hiddenCave"
+        },
+        {
+          "choice": "Return to the stone door",
+          "nextScene": "stoneDoorOpen"
+        }
+      ]
+    },
+    "caveEntrance": {
+      "description": "You arrive at the Cave of Shadows, the entrance dark and foreboding. The Torch illuminates a faint path inside.",
+      "choices": [
+        {
+          "choice": "Enter the cave",
+          "nextScene": "caveInside"
+        },
+        {
+          "choice": "Turn back",
+          "nextScene": "turnBack"
+        }
+      ]
+    },
+    "askAboutCave": {
+      "description": "The Ranger warns you: 'The Cave of Shadows is filled with traps and dangerous creatures. Proceed with caution.'",
+      "choices": [
+        {
+          "choice": "Thank the Ranger and head to the Cave",
+          "nextScene": "caveEntrance"
+        }
+      ]
+    },
+    "turnBack": {
+      "description": "You decide it's best to return to the forest and reconsider your options.",
+      "choices": [
+        { "choice": "Return to the Ranger", "nextScene": "rangerHelp" },
+        {
+          "choice": "Explore a different part of the forest",
+          "nextScene": "forestDepths"
+        }
+      ]
+    },
+    "caveInside": {
+      "description": "Inside the cave, you find two paths: one leading deeper into darkness, and the other to a glowing pool of water.",
+      "choices": [
+        {
+          "choice": "Take the path into the darkness",
+          "nextScene": "darkPath"
+        },
+        {
+          "choice": "Investigate the glowing pool",
+          "nextScene": "glowingPool"
+        }
+      ]
+    },
+    "glowingPool": {
+      "description": "You approach the pool and find a glowing object at the bottom. You dive in to retrieve it and discover it's the Lost Key!",
+      "items": ["Lost Key"],
+      "choices": [
+        {
+          "choice": "Rush out of the cave",
+          "nextScene": "caveExit"
+        },
+        {
+          "choice": "Stay and explore the treasure room",
+          "nextScene": "treasureRoom"
+        }
+      ]
+    },
+    "darkPath": {
+      "description": "The darkness grows thick, and you feel a chill running down your spine. Something moves in the shadows.",
+      "choices": [
+        {
+          "choice": "Keep walking",
+          "nextScene": "darkCreature"
+        },
+        {
+          "choice": "Turn back",
+          "nextScene": "caveExit"
+        }
+      ]
+    },
+    "darkCreature": {
+      "description": "A shadowy figure lunges at you, but you manage to fend it off with the Torch, revealing a hidden passage.",
+      "choices": [
+        {
+          "choice": "Enter the hidden passage",
+          "nextScene": "hiddenPassage"
+        },
+        {
+          "choice": "Return to the cave entrance",
+          "nextScene": "caveEntrance"
+        }
+      ]
+    },
+    "hiddenPassage": {
+      "description": "The hidden passage leads to a secret chamber filled with ancient artifacts and a map.",
+      "items": ["Ancient Artifact", "Secret Map"],
+      "choices": [
+        {
+          "choice": "Use the Secret Map to find the Lost Key",
+          "nextScene": "glowingPool"
+        },
+        {
+          "choice": "Take the Ancient Artifact and leave the cave",
+          "nextScene": "caveExit"
+        }
+      ]
+    },
+    "hiddenCave": {
+      "description": "Inside the hidden cave, you discover an altar with a mysterious inscription.",
+      "choices": [
+        {
+          "choice": "Read the inscription",
+          "nextScene": "readInscription"
+        },
+        {
+          "choice": "Ignore the altar and explore further",
+          "nextScene": "exploreFurther"
+        }
+      ]
+    },
+    "readInscription": {
+      "description": "The inscription reveals a clue about the Lost Key's location.",
+      "items": ["Clue about Key"],
+      "choices": [
+        { "choice": "Follow the clue", "nextScene": "hiddenPath" },
+        {
+          "choice": "Ignore the clue and explore further",
+          "nextScene": "exploreFurther"
+        }
+      ]
+    },
+    "exploreFurther": {
+      "description": "You venture deeper into the hidden cave and find an underground river flowing quietly.",
+      "choices": [
+        { "choice": "Follow the river", "nextScene": "riverPath" },
+        { "choice": "Return to the altar", "nextScene": "hiddenCave" }
+      ]
+    },
+    "findPath": {
+      "description": "You manage to find a familiar path and regain your bearings.",
+      "choices": [
+        { "choice": "Head back to the Ranger", "nextScene": "rangerHelp" },
+        {
+          "choice": "Continue exploring the forest",
+          "nextScene": "forestDepths"
+        }
+      ]
+    },
+    "climbTree": {
+      "description": "From the top of the tree, you spot the entrance to the Cave of Shadows in the distance.",
+      "choices": [
+        { "choice": "Head towards the cave", "nextScene": "caveEntrance" },
+        {
+          "choice": "Climb down and return to the path",
+          "nextScene": "findPath"
+        }
+      ]
+    },
+    "forestDepths": {
+      "description": "Deeper into the forest, you come across an ancient shrine covered in ivy.",
+      "choices": [
+        {
+          "choice": "Investigate the shrine",
+          "nextScene": "investigateShrine"
+        },
+        {
+          "choice": "Ignore the shrine and move on",
+          "nextScene": "keepExploring"
+        }
+      ]
+    },
+    "investigateShrine": {
+      "description": "The shrine reveals an old map showing hidden paths in the forest.",
+      "items": ["Old Map"],
+      "choices": [
+        {
+          "choice": "Use the map to find hidden treasures",
+          "nextScene": "hiddenTreasures"
+        },
+        {
+          "choice": "Keep the map for later and explore more",
+          "nextScene": "keepExploring"
+        }
+      ]
+    },
+    "hiddenTreasures": {
+      "description": "The map leads you to a hidden clearing with several small chests.",
+      "choices": [
+        { "choice": "Open the chests", "nextScene": "treasureChestOpen" },
+        {
+          "choice": "Mark the location and return later",
+          "nextScene": "returnForest"
+        }
+      ]
+    },
+    "hiddenPath": {
+      "description": "Following the clue, you find a hidden path leading to an ancient door covered in runes.",
+      "choices": [
+        { "choice": "Open the door", "nextScene": "ancientDoor" },
+        { "choice": "Examine the runes", "nextScene": "examineRunes" }
+      ]
+    },
+    "riverPath": {
+      "description": "Following the river, you reach a serene glade with an old bridge.",
+      "choices": [
+        { "choice": "Cross the bridge", "nextScene": "crossBridge" },
+        { "choice": "Explore the glade", "nextScene": "exploreGlade" }
+      ]
+    },
+    "ancientDoor": {
+      "description": "The door creaks open, revealing a hidden chamber filled with treasures and the Lost Key.",
+      "items": ["Lost Key", "Ancient Treasures"],
+      "choices": [
+        { "choice": "Collect the treasures", "nextScene": "treasureRoom" },
+        { "choice": "Leave with the Lost Key", "nextScene": "caveExit" }
+      ]
+    },
+    "examineRunes": {
+      "description": "The runes tell the story of the Lost Key and its power to unlock ancient mysteries.",
+      "choices": [
+        {
+          "choice": "Open the door with newfound knowledge",
+          "nextScene": "ancientDoor"
+        },
+        { "choice": "Return to the forest", "nextScene": "returnForest" }
+      ]
+    },
+    "crossBridge": {
+      "description": "Crossing the bridge, you find yourself at the entrance to a hidden cave.",
+      "choices": [
+        { "choice": "Enter the cave", "nextScene": "hiddenCave" },
+        { "choice": "Return to the river", "nextScene": "riverPath" }
+      ]
+    },
+    "exploreGlade": {
+      "description": "Exploring the glade, you find a hidden passage leading deeper into the forest.",
+      "choices": [
+        { "choice": "Follow the passage", "nextScene": "hiddenPath" },
+        { "choice": "Return to the glade", "nextScene": "riverPath" }
+      ]
+    },
+    "treasureRoom": {
+      "description": "You find a treasure chest glowing with a faint magical light.",
+      "choices": [
+        {
+          "choice": "Use the Lost Key to open the chest",
+          "nextScene": "treasureChestOpen"
+        },
+        {
+          "choice": "Look for traps before opening the chest",
+          "nextScene": "searchForTraps"
+        }
+      ]
+    },
+    "treasureChestOpen": {
+      "description": "Inside the chest is a magical artifact. As you touch it, you feel a rush of energy. You've unlocked the Treasure of the Forest.",
+      "items": ["Magical Artifact"],
+      "end": true
+    },
+    "searchForTraps": {
+      "description": "You carefully inspect the chest and find that it’s safe to open. You unlock the chest and discover a magical artifact.",
+      "items": ["Magical Artifact"],
+      "end": true
+    },
+    "caveExit": {
+      "description": "You quickly make your way out of the cave, but you can't shake the feeling that the adventure is far from over.",
+      "end": true
+    }
+  }
+}

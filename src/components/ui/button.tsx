@@ -9,6 +9,8 @@ interface ButtonProps extends ComponentProps<"button"> {
 const BUTTON_VARIANTS = {
   default:
     "bg-primary text-foreground border-primary focus:outline-none focus:ring-2 focus:ring-primary-ring",
+  adventure:
+    "bg-neutral-800 text-white border-2 border-neutral-600 text-sm uppercase font-bold tracking-widest focus:ring-2 focus:ring-neutral-500 hover:bg-neutral-700 active:bg-neutral-900 transition duration-200",
 };
 
 const ROUNDED_VARIANTS = {
@@ -23,8 +25,8 @@ export function Button(props: ButtonProps) {
       {...props}
       className={cn(
         "px-6 py-3 bg-foreground text-background",
-        BUTTON_VARIANTS[props.variant || "default"],
         ROUNDED_VARIANTS[props.rounded || "default"],
+        BUTTON_VARIANTS[props.variant || "default"],
         props.className
       )}
     />

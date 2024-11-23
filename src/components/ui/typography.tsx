@@ -1,7 +1,9 @@
 import { cn } from "@/utils/cn";
 import { ComponentProps } from "react";
 
-interface H1Props extends ComponentProps<"h1"> {}
+interface H1Props extends ComponentProps<"h1"> {
+  gradient?: boolean;
+}
 
 export function H1(props: H1Props) {
   return (
@@ -9,13 +11,16 @@ export function H1(props: H1Props) {
       {...props}
       className={cn(
         "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
+        props.gradient && "primary__text__gradient",
         props.className
       )}
     />
   );
 }
 
-interface H3Props extends ComponentProps<"h3"> {}
+interface H3Props extends ComponentProps<"h3"> {
+  gradient?: boolean;
+}
 
 export function H3(props: H3Props) {
   return (
@@ -23,16 +28,28 @@ export function H3(props: H3Props) {
       {...props}
       className={cn(
         "scroll-m-20 text-2xl font-semibold tracking-tight",
+        props.gradient && "primary__text__gradient",
         props.className
       )}
     />
   );
 }
 
-interface ParagraphProps extends ComponentProps<"p"> {}
+interface ParagraphProps extends ComponentProps<"p"> {
+  gradient?: boolean;
+}
 
 export function P(props: ParagraphProps) {
-  return <p {...props} className={cn("leading-7", props.className)} />;
+  return (
+    <p
+      {...props}
+      className={cn(
+        "leading-7",
+        props.gradient && "primary__text__gradient",
+        props.className
+      )}
+    />
+  );
 }
 
 export const Typography = {

@@ -69,3 +69,15 @@
 .spacing__y__3xl > :not([hidden]) ~ :not([hidden]) {
   margin: 16rem 0;
 }
+
+.sm__devices__padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .sm__devices__padding {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}

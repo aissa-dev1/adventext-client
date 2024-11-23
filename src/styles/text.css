@@ -1,0 +1,5 @@
+.primary__text__gradient {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(to right, var(--primary), var(--secondary));
+}

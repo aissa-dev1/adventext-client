@@ -1,4 +1,3 @@
-import { TextLogo } from "../reusable/text-logo";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Typography } from "../ui/typography";
@@ -11,7 +10,7 @@ export function ComingSoon() {
   return (
     <section className="h-screen flex__center">
       <div className="text-center spacing__y__md">
-        <TextLogo />
+        <Typography.H1 gradient={true}>Adventext</Typography.H1>
         <Typography.H3>We&apos;re launching soon!</Typography.H3>
         <Typography.P className="max-w-md mx-auto font-playfair-display">
           Get ready for an immersive text-based adventure experience. Stay tuned
